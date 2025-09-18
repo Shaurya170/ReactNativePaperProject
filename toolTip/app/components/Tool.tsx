@@ -1,17 +1,29 @@
 import * as React from 'react';
-import { IconButton, Provider as PaperProvider, Tooltip } from 'react-native-paper';
+import { StyleSheet, View } from 'react-native';
+import { Provider as PaperProvider, Tooltip } from 'react-native-paper';
+import MyButton from './MyButton';
+
 
 const Tool = () => (
-  <Tooltip title="hello" >
-    <IconButton icon="camera" selected size={24} onPress={() => {}} />
-  </Tooltip>
-);
+  <View style={styles.container}>
 
-const ToolWithProvider = () => (
+ 
   <PaperProvider>
-    <Tool />
+    <Tooltip title="hello" enterTouchDelay={200} leaveTouchDelay={200} >
+      <MyButton></MyButton>
+    </Tooltip>
   </PaperProvider>
+
+   </View>
 );
 
+const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+  }
+})
+ 
 
-export default ToolWithProvider;
+export default Tool;
