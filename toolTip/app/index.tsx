@@ -1,11 +1,18 @@
 import { StyleSheet, View } from "react-native";
-import Tool from "./components/Tool";
+import { Provider as PaperProvider, Tooltip } from "react-native-paper";
+import MyButton from "./components/MyButton";
 
 export default function Index() {
   return (
+    <PaperProvider>
     <View style={styles.container}>
-      <Tool></Tool>
+      
+      <Tooltip title='gello' enterTouchDelay={1000} leaveTouchDelay={1000}>
+      <MyButton></MyButton>
+      </Tooltip>
+     
     </View>
+    </PaperProvider>
   );
 }
 
