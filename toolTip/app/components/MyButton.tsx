@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import React, { useState } from "react";
+import { StyleSheet, Text, TouchableHighlight, View } from "react-native";
 
 export default function TouchableHighlightExample() {
   const [count, setCount] = useState(0);
@@ -11,9 +11,8 @@ export default function TouchableHighlightExample() {
         underlayColor="#DDDDDD"
         onPress={() => setCount(count + 1)}
       >
-        <Text style={styles.buttonText}>Press Me</Text>
+        <Text style={styles.buttonText}>Do Not Disturb</Text>
       </TouchableHighlight>
-      <Text style={styles.counter}>Pressed {count} times</Text>
     </View>
   );
 }
@@ -21,17 +20,17 @@ export default function TouchableHighlightExample() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   button: {
-    backgroundColor: '#2196F3',
+    backgroundColor: "#3f007aff",
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 6,
   },
   buttonText: {
-    color: 'white',
+    color: "white",
     fontSize: 18,
   },
   counter: {

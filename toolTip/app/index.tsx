@@ -5,21 +5,23 @@ import MyButton from "./components/MyButton";
 export default function Index() {
   return (
     <PaperProvider>
-    <View style={styles.container}>
-      
-      <Tooltip title='gello' enterTouchDelay={1000} leaveTouchDelay={1000}>
-      <MyButton></MyButton>
-      </Tooltip>
-     
-    </View>
+      <View style={styles.container}>
+        <Tooltip
+          title="Hides all notifications"
+          enterTouchDelay={1}
+          leaveTouchDelay={1000}
+        >
+          <MyButton></MyButton>
+        </Tooltip>
+      </View>
     </PaperProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-  }
-})
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
