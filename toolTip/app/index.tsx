@@ -1,6 +1,5 @@
-import { StyleSheet, View } from "react-native";
+import { Button, StyleSheet, View } from "react-native";
 import { Provider as PaperProvider, Tooltip } from "react-native-paper";
-import MyButton from "./components/MyButton";
 
 export default function Index() {
   return (
@@ -11,7 +10,7 @@ export default function Index() {
           enterTouchDelay={1}
           leaveTouchDelay={1000}
         >
-          <MyButton></MyButton>
+          <Button title="Do Not Disturb"></Button>
         </Tooltip>
       </View>
     </PaperProvider>
